@@ -216,6 +216,12 @@ public class addNewQuestion extends javax.swing.JFrame {
         String opt4 = jTextField5.getText();
         String answer = jTextField6.getText();
         try {
+            // TODO: Basic
+//            Connection con = ConnectionProvider.getCon();
+//            String sqlQueryToInsert = "INSERT INTO `qems1`.`questions` (`question`,`option1`,`option2`,`option3`,`option4`,`answer`)VALUES(?,?,?,?,?,?)";
+//            PreparedStatement ps = con.prepareStatement(sqlQueryToInsert);
+//            ps.executeUpdate();
+            
             Connection con = ConnectionProvider.getCon();
             String sqlQueryToInsert = "INSERT INTO `qems1`.`questions` (`question`,`option1`,`option2`,`option3`,`option4`,`answer`)VALUES(?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sqlQueryToInsert);

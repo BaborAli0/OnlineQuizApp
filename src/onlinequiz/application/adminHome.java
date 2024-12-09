@@ -92,6 +92,11 @@ public class adminHome extends javax.swing.JFrame {
         jButton6.setIcon(new javax.swing.ImageIcon("C:\\Users\\alimh\\OneDrive\\Documents\\NetBeansProjects\\OnlineQuiz Application\\nbproject\\Source package\\icon\\all student result.png")); // NOI18N
         jButton6.setText("All Student Result");
         jButton6.setBorder(null);
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
         getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, -1, -1));
 
         jButton7.setFont(new java.awt.Font("Cambria", 1, 18)); // NOI18N
@@ -209,6 +214,24 @@ public class adminHome extends javax.swing.JFrame {
         addNewQuestion q = new addNewQuestion();
         q.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+        // TODO add your handling code here:
+        
+        if (open == 0) {
+            //new addNewQuestion().setVisible(true);
+            new allStudentResult.setVisible(true);
+
+            open = 1;
+
+        } else {
+
+            JFrame jf = new JFrame();
+            jf.setAlwaysOnTop(true);
+            JOptionPane.showMessageDialog(jf, "One form is already Open");
+
+        }
+    }//GEN-LAST:event_jButton6MouseClicked
 
     /**
      * @param args the command line arguments
